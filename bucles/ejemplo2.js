@@ -3,7 +3,7 @@
  while (numero!=-1) {
     numero = 5
     suma += numero
-    console.log(suma)
+    //console.log(suma)
     break;
  }
  console.log(suma)

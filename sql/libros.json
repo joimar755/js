@@ -1,0 +1,37 @@
+use libros;
+//_id: 1,nombre: 'El aleph', autor: 'Borges', editoriales: ['Planeta','Siglo XXI'], precio: 20, cantidad: 
+//50
+//_id: 2,nombre: 'Martin Fierro', autor: 'Jose Hernandez', editoriales: ['Planeta'], precio: 
+//50,cantidad: 12
+db.libros.insertMany([
+  { _id: 1, name: 'El aleph', autor:'borges', editoriales: ['Planeta','Siglo XXI'], precio:20, cantidad:50 },
+  { _id: 2, name: 'Martin Fierro', autor:'Jose Hernandez', editoriales: ['Planeta'], precio:50, cantidad:12  }
+]);
+db.libros.find() 
+
+    //_id: 1, nombre: 'El aleph', autor: 'Borges', editoriales: ['Planeta','Siglo XXI'], precio: 20, cantidad: 50   
+    //_id: 2, nombre: 'Martin Fierro', autor: 'Jose Hernandez', editoriales: ['Planeta'], precio: 50, cantidad: 12
+    //_id: 3, nombre: 'El Hobbit', autor: 'J.R.R. Tolkien', editoriales: ['Sudamericana'], precio: 35, cantidad: 30
+    //_id: 4, nombre: 'El Señor de los Anillos', autor: 'J.R.R. Tolkien', editoriales: ['Sudamericana'], precio: 60, cantidad: 20
+    //_id: 5, nombre: 'La Divina Comedia', autor: 'Miguel de Cervantes', editoriales: ['Siglo XXI'], precio: 40, cantidad: 25
+    //_id: 6, nombre: 'El Quijote', autor: 'Miguel de Cervantes', editoriales: ['Siglo XXI'], precio:
+    db.libros.find({_id:1})
+    db.libros.find({precio:20})
+    db.libros.find({precio:50,cantidad:20})
+    
+    //Recuperar todos los libros que tienen un precio mayor a 40:
+    db.libros.find({ precio: { $gt:40 }})
+    //Recuperar todos los libros que en le campo cantidad tiene 50 o más:
+    db.libros.find( { cantidad: { $gte : 50 }})
+    //Recuperar todos los libros que en le campo cantidad hay un valor distinto a 50:
+    db.libros.find( { cantidad: { $ne : 50 }})
+    //Recuperar todos los libros cuyo precio estén comprendidos entre 20 y 45:
+    db.libros.find( { precio: { $gte : 20 , $lte : 45} })
+    //Recuperar todos los libros de la editorial 'Planeta':
+    db.libros.find( { editorial: { $in : ['Planeta'] } })
+    //Recuperar todos los libros que no pertenezcan a la editorial 'Planeta':
+    db.libros.find( { editorial: { $nin : ['Planeta'] } })
+    
+    use libros
+    db.libros.drop()
+    show collections

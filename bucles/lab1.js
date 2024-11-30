@@ -13,7 +13,7 @@ function calcular() {
             numeros.push(numero);
         } else {
             console.log("Debe ingresar un número válido");
-            
+            break;
         }
     }
  }

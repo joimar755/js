@@ -11,9 +11,9 @@ while numeroUsuario != numeroAleatorio:
     numeroUsuario = int(input("Adivina un número (entre 1 y 8): "))
     intento += 1
     if numeroUsuario > numeroAleatorio:
-        pista = print("menor", numeroAleatorio)
+        pista = print("menor" )#numeroAleatorio)
     elif numeroUsuario < numeroAleatorio:
-        pista = print("mayor", numeroAleatorio)
+        pista = print("mayor" )#numeroAleatorio)
         
-print("el numero de intentos fueron", intento)
+print("el numero de intentos fueron: ", intento, "y el numero fue: ",numeroAleatorio)
         

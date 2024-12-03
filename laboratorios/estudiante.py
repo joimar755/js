@@ -2,6 +2,7 @@
 utilizando un bucle '''
 
 estudiantes = ["pedro", "lucas","juan"]
-
+cont = 0
 for estudiante in estudiantes:
-    print(estudiante)
+    cont += 1
+    print(cont, estudiante)

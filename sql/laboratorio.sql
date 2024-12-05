@@ -34,3 +34,15 @@ drop table empleados;
 
 
 select * from empleados;
+
+SELECT l.titulo, l.genero, a.nombre, a.nacionalidad   
+FROM Libros l
+INNER JOIN Autores a ON l.Autor_id = a.id
+WHERE a.nombre = 'Gabriel García Márquez' AND año_publicacion > 1960
+
+
+UPDATE Libros 
+SET genero = 'Accion'
+WHERE titulo = '1984';
+
+SELECT * from Libros

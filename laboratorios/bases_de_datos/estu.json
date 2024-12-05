@@ -1,0 +1,14 @@
+
+db.estudiantes.insertMany([
+    { "nombre": "Juan", "edad": 20, "ciudad": "Bogota" }, { "nombre": "Ana", "edad": 
+22, "ciudad": "Medellin" }, { "nombre": "Luis", "edad": 23, "ciudad": "Cali" }
+]);
+db.libros.find() 
+
+db.estudiantes.find({
+    ciudad:{$in : ['Cali'] }
+})
+
+db.libros.find({
+    edad: { $gt:20 }               
+})

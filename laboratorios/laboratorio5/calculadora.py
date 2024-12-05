@@ -1,6 +1,3 @@
-''' Desarrollar un programa que simule una calculadora básica, permitiendo al usuario 
-realizar sumas, restas, multiplicaciones y divisiones. '''
-
 numero1 = int(input("ingrese numero 1: "))   
 numero2 = int(input("ingrese numero 2: "))
 

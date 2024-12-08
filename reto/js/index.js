@@ -37,6 +37,7 @@ const producto = [
   },
 ];
 
+let items = [];
 const tabla = document.getElementById("tabla");
 tabla.innerHTML = "";
 producto.forEach((element) => {
@@ -44,10 +45,44 @@ producto.forEach((element) => {
        <div class="col-2">
       <div class="p-3 card">
         <img src="${element.thumbnailUrl}" class="card-img-top  d-block mx-auto" alt="${element.title}">
-        <h5 class="card-title">${element.title}</h5>
+        <h5 class="card-title" id="title">${element.title}</h5>
         <p class="card-text">Precio: ${element.precio}</p>
-        <button type="button" class="btn btn-primary">añadir</button>
+         <button 
+          type="button" 
+          class="btn btn-primary" 
+          onclick="agregarCar(${element.id}, '${element.title}', ${element.precio})">
+          Añadir
+        </button>
       </div>
     </div>
     `;
 });
+
+function agregarCar(id, title,precio) {
+    const carrito = {
+        id:id,
+        title: title,
+        precio: precio
+    }
+    items.push(carrito)
+    console.log(items)
+    cargar()
+}
+function cargar() {
+    const carrito = document.getElementById('carrito');
+    carrito.innerHTML = "";
+    let total = 0
+    items.forEach(item => {
+        carrito.innerHTML += `
+        <div class="row">
+            <div class="col-3">${item.title}</div>
+            <div class="col-3">${item.precio}</div>
+            <div class="col-3">
+                <button class="btn btn-danger" onclick="eliminarCar(${item.id})">Eliminar</button>
+            </div>
+        </div>
+        `
+        total += item.precio
+    })
+    document.getElementById('total').innerText = total
+}

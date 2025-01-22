@@ -19,7 +19,7 @@ function Calculadora(n1, n2, operacion) {
 let next = true;
 
 while (next) {
-  const operacion = "multi";
+  const operacion = "div";
   if (operacion.toLowerCase() === "fin") {
     next = false;
     console.log("fin del programa");

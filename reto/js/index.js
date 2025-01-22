@@ -73,7 +73,7 @@ function cargar() {
     carrito.innerHTML = "";
     let total = 0
     items.forEach(item => {
-        carrito.innerHTML += `
+        carrito.innerHTML += `  
         <div class="row">
             <div class="col-3">${item.title}</div>
             <div class="col-3">${item.precio}</div>

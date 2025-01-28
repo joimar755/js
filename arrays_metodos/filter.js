@@ -35,17 +35,18 @@ const producto = [
       title: "Chela",
       thumbnailUrl: "https://picsum.photos/id/50/600",
     },
-  ];
-const pro = producto.map((item) => {
-   return{
-     ...item,
-     content: `${item.title} - ${item.precio}`
-   }
-}) 
-const doublePrice = pro.map(item => ({
-  ...item,
-  precio: item.precio * 2
-}))
+  ]; 
 
+  /* for (let i = 0; i < producto.length; i++) {
+    if (producto[i].title === "Agua") {
+      console.log(producto[i]);
+    }
+  } */
 
-console.log(doublePrice);
+const filter = producto.filter(item => {
+    if (item.title === "Agua") {
+        return true;
+    }
+})
+
+console.log(filter); 

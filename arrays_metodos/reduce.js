@@ -35,17 +35,25 @@ const producto = [
       title: "Chela",
       thumbnailUrl: "https://picsum.photos/id/50/600",
     },
-  ];
-const pro = producto.map((item) => {
-   return{
-     ...item,
-     content: `${item.title} - ${item.precio}`
-   }
-}) 
-const doublePrice = pro.map(item => ({
-  ...item,
-  precio: item.precio * 2
-}))
+  ];  
 
 
-console.log(doublePrice);
+const doublePrice = producto.map(item => ({
+    ...item,
+    cantidad: 1
+  }))
+
+
+const filter = producto.filter(item => {
+    if (item.title === "Pizza") {
+        return true;
+    }
+    
+}).map(item => ({
+    ...item,
+    cantidad: 10
+  }))
+
+
+const suma = filter.reduce((total, item) => total + item.precio * item.cantidad , 0)
+console.log(suma)

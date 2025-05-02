@@ -1,0 +1,8 @@
+Nombre,Edad,Genero,Ingresos,Email,Visitas,Pais
+Juan,25.0,M,3000.0,juan@mail.com,5.0,Colombia
+Maria,30.0,F,4000.0,maria@mail.com,7.0,Colombia
+Pedro,,H,3500.0,,6.0,Mexico
+None,22.0,M,,pedro@mail.com,,None
+Luisa,29.0,F,3200.0,luisa@mail.com,8.0,Argentina
+-,28.0,Mujer,,,7.0,Colombia
+Ana,,F,3100.0,ana@mail.com,,-

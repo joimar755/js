@@ -1,0 +1,7 @@
+Nombre,Edad,Genero,Email,Pais
+Juan,25.0,M,juan@mail.com,Colombia
+Maria,30.0,F,maria@mail.com,
+Pedro,,H,pedro@mail.com,Mexico
+,29.0,F,ana@mail.com,Argentina
+Luisa,28.0,F,luisa@mail.com,Colombia
+Carlos,,M,,Brazil

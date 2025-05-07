@@ -1,0 +1,11 @@
+Nombre,Edad,Email,Pais,Categoria,FechaIngreso,Ingresos
+Carlos,34.0,carlos@mail.com,Colombia,Cliente,2021-01-15,5000.0
+Ana,29.0,ana@mail.com,Colombia,Cliente,2020/03/12,7000.0
+Luis,,luis@mail.com,Mexico,Proveedor,2022-07-01,4000.0
+Pedro,45.0,pedro@mail.com,Argentina,,2021/12/01,6000.0
+María,25.0,maria@mail.com,Colombia,Cliente,2021-05-20,8000.0
+,33.0,lucia@mail.com,Argentina,Proveedor,2020-03-12,7500.0
+Lucía,30.0,,Brasil,Proveedor,2019-11-30,3000.0
+Andrés,,andres@mail.com,,Cliente,2022-01-01,
+Sofía,22.0,sofia@mail.com,Peru,,2021/08/15,5500.0
+Miguel,40.0,miguel@mail.com,Chile,Proveedor,,6200.0
